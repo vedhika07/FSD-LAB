@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CSS Selectors</title>
+
+<style>
+/* ===== SIMPLE SELECTORS ===== */
+h1 { 
+    color:crimson;
+ }                     
+#hero { color:darksalmon; }                    
+.movie { background-color:antiquewhite; } 
+h2, h3 
+{
+     color:darkgoldenrod;
+    }                  
+* 
+{
+     font-family:initial;
+     }                 
+
+/* ===== COMBINATOR SELECTORS ===== */
+div p { color: brown; }                   
+div > span { color: orange; }             
+h3 + p { color: purple; }                 
+h4 ~ p { color: darkcyan; }               
+
+/* ===== PSEUDO-CLASSES ===== */
+a:hover { color: red; }                   /* hover */
+li:first-child { color: blue; }           /* first child */
+li:nth-child(2) { color: green; }         /* nth child */
+input:focus { background: lightgreen; }   /* focus */
+input:checked { outline: 2px solid red; } /* checked */
+
+/* ===== PSEUDO-ELEMENTS ===== */
+p::first-letter { font-size: 25px; color: black; }
+p::first-line { font-weight: bold; }
+
+/* ===== ATTRIBUTE SELECTORS ===== */
+input[type="text"] { background-color: lightblue; }
+input[type="password"] { background-color: pink; }
+a[target="_blank"] { color: orange; }
+</style>
+</head>
+
+<body>
+
+<h1>Telugu Movies</h1>
+
+<h2>Top Heroes</h2>
+<p id="hero">Mahesh Babu</p>
+<p class="movie">NTR</p>
+<p class="movie">Adivi Sesh</p>
+
+<ul>
+  <li>Athadu</li>
+  <li>Aravindha Sametha</li>
+  <li>Mirchi</li>
+</ul>
+
+<div>
+  <p>Goodachari</p>
+  <span>Dacoit</span>
+</div>
+
+<h3>Movies</h3>
+<p>Adjacent sibling example</p>
+
+<h4>Classic Movies</h4>
+<p>chi la sow</p>
+<p>sammohanam</p>
+
+<a href="https://en.wikipedia.org/wiki/Telugu_cinema" target="_blank">Open Movie Site</a>
+
+<input type="text" placeholder="Favourite Hero">
+<input type="password" placeholder="Password">
+</body>
+</html>
