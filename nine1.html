@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Functions</title>
+
+<script>
+
+function operations() {
+
+let n = parseInt(document.getElementById("num").value);
+
+// Factorial
+let fact = 1;
+for(let i=1;i<=n;i++)
+{
+fact = fact * i;
+}
+
+// Fibonacci
+let a=0,b=1,c;
+let fib="";
+for(let i=1;i<=n;i++)
+{
+fib += a + " ";
+c = a + b;
+a = b;
+b = c;
+}
+
+// Prime numbers
+let prime="";
+for(let i=2;i<=n;i++)
+{
+let count=0;
+for(let j=1;j<=i;j++)
+{
+if(i%j==0)
+count++;
+}
+if(count==2)
+prime += i + " ";
+}
+
+// Palindrome
+let num = document.getElementById("num").value;
+let rev="";
+for(let i=num.length-1;i>=0;i--)
+{
+rev += num[i];
+}
+
+let pal;
+if(num==rev)
+pal = "Palindrome";
+else
+pal = "Not Palindrome";
+
+// Display results
+document.getElementById("res").innerHTML =
+"Factorial: "+fact+"<br>"+
+"Fibonacci: "+fib+"<br>"+
+"Prime Numbers: "+prime+"<br>"+
+pal;
+
+}
+
+</script>
+</head>
+
+<body>
+
+<h3>JavaScript Functions</h3>
+
+Enter Number:
+<input type="text" id="num" onchange="operations()">
+
+<p id="res"></p>
+
+</body>
+</html>

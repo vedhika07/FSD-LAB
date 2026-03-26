@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+let student = {name:"Vedhika", age:17, course:"CSE"};
+
+// for-in
+for(let key in student){
+  document.write(key + " : " + student[key] + "<br>");
+}
+
+document.write("<br>");
+
+// forEach
+Object.entries(student).forEach(function([k,v]){
+  document.write(k + " : " + v + "<br>");
+});
+
+document.write("<br>");
+
+// for-of
+for(let [k,v] of Object.entries(student)){
+  document.write(k + " : " + v + "<br>");
+}
+
+</script>
+
+</body>
+</html>

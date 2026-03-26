@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+let a = parseInt(prompt("Enter first number:"));
+let b = parseInt(prompt("Enter second number:"));
+let c = parseInt(prompt("Enter third number:"));
+
+if(a === b && b === c){
+    document.write("EQUAL NUMBERS");
+    alert("EQUAL NUMBERS");
+}
+else{
+    let largest = a;
+
+    if(b > largest){
+        largest = b;
+    }
+    if(c > largest){
+        largest = c;
+    }
+
+    document.write(largest + " LARGER NUMBER");
+    alert(largest + " LARGER NUMBER");
+}
+</script>
+
+</body>
+</html>

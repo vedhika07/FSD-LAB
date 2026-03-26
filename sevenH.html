@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+function Student(name,age){
+    this.name = name;        // property
+    this.age = age;
+
+    this.display = function(){   // method
+        return this.name + " " + this.age;
+    };
+}
+
+let s = new Student("Vedhika",17);
+
+Object.defineProperty(s,"info",{   // accessor
+    get:function(){
+        return this.name + " is " + this.age + " years old";
+    }
+});
+
+document.write(s.display() + "<br>");
+document.write(s.info);
+
+</script>
+
+</body>
+</html>

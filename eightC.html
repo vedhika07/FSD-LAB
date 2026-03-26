@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loops Example</title>
+</head>
+<body>
+
+<h2>Using FOR Loop</h2>
+<p id="forLoop"></p>
+
+<h2>Using WHILE Loop</h2>
+<p id="whileLoop"></p>
+
+<h2>Using DO-WHILE Loop</h2>
+<p id="doWhileLoop"></p>
+
+<script>
+
+// FOR LOOP
+let text1 = "";
+for(let i = 1; i <= 10; i++){
+    text1 += i + " ";
+}
+document.getElementById("forLoop").innerHTML = text1;
+
+
+// WHILE LOOP
+let text2 = "";
+let j = 1;
+
+while(j <= 10){
+    text2 += j + " ";
+    j++;
+}
+document.getElementById("whileLoop").innerHTML = text2;
+
+
+// DO-WHILE LOOP
+let text3 = "";
+let k = 1;
+
+do{
+    text3 += k + " ";
+    k++;
+}while(k <= 10);
+
+document.getElementById("doWhileLoop").innerHTML = text3;
+
+</script>
+
+</body>
+</html>
